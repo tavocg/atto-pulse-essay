@@ -29,8 +29,9 @@ jobs:
         with:
           scheme: full
           run: |
-            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=. doc/report.tex
-            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=. doc/slides.tex
+            cd doc
+            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=.. report.tex
+            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=.. slides.tex
 
       - name: Prepare Pages site
         run: |

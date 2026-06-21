@@ -9,6 +9,8 @@
 \usepackage{hyperref}
 \usepackage{parskip}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{array}
 
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
 \setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=1pt}
@@ -46,7 +48,12 @@ Pulsos de attosegundos y dinámica electrónica\par}
 
 \section*{Antecedentes de la investigación}
 
-El Premio Nobel de Física 2023 fue concedido a Pierre Agostini, Ferenc Krausz y Anne L'Huillier por convertir una intuición central de la mecánica cuántica en una tecnología experimental: si los electrones cambian de estado en escalas de $10^{-18}$ segundos, el laboratorio necesita destellos comparables para interrogarlos. Un attosegundo equivale a una milmillonésima de una milmillonésima de segundo; la unidad atómica de tiempo es $24.2\,\as$, y muchas correlaciones electrónicas, retardos de fotoemisión y redistribuciones de carga ocurren entre decenas y cientos de attosegundos [1]. Antes de esta área, la femtoquímica de Ahmed Zewail había mostrado cómo observar movimientos nucleares y estados de transición con pulsos de femtosegundos, pero esa escala todavía era demasiado lenta para seguir directamente la nube electrónica [1,2].
+El Premio Nobel de Física 2023 fue concedido a Pierre Agostini, Ferenc Krausz y Anne L'Huillier por convertir una intuición central de la mecánica cuántica en una tecnología experimental: si los electrones cambian de estado en escalas de $10^{-18}$ segundos, el laboratorio necesita destellos comparables para interrogarlos. Un attosegundo equivale a una milmillonésima de una milmillonésima de segundo; la unidad atómica de tiempo es $24.2\,\as$, y muchas correlaciones electrónicas, retardos de fotoemisión y redistribuciones de carga ocurren entre decenas y cientos de attosegundos [1]. El hilo conductor del premio es, por tanto, una cadena de tres problemas: crear luz suficientemente breve, medirla con fase conocida y usarla para leer la dinámica electrónica. Antes de esta área, la femtoquímica de Ahmed Zewail había mostrado cómo observar movimientos nucleares y estados de transición con pulsos de femtosegundos, pero esa escala todavía era demasiado lenta para seguir directamente la nube electrónica [1,2].
+
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=1.55in,keepaspectratio]{../res/figures/time_scales.png}\\
+\small Figura 1. La contribución del Nobel 2023 fue abrir una escala temporal donde la variable relevante deja de ser el movimiento nuclear y pasa a ser la fase electrónica.
+\end{center}
 
 El antecedente técnico fue el desarrollo de láseres ultracortos: bloqueo de modos, amplificación de pulsos chirpeados, compresión por fibras huecas y espejos chirpeados. Sin embargo, el salto conceptual vino de la generación de armónicos altos, o HHG. En 1987, L'Huillier y colaboradores observaron que un gas noble iluminado con láser infrarrojo intenso no emitía solo pocos armónicos, sino una meseta de armónicos impares que se extendía hasta energías del ultravioleta extremo [3]. Esa meseta revelaba una banda espectral ancha, condición necesaria para sintetizar pulsos breves por el principio de Fourier: cuanto más ancho es el espectro coherente, menor puede ser la duración temporal.
 
@@ -64,6 +71,11 @@ Agostini aportó un antecedente decisivo desde la física de campos intensos: la
 
 El resultado central del campo fue producir y medir pulsos de luz suficientemente cortos para tomar ``instantáneas'' de electrones. En 2001 se publicaron dos demostraciones complementarias. El grupo de Agostini generó un tren de pulsos de $250\,\as$ a partir de HHG y lo caracterizó con RABBITT [8]. En el mismo año, el grupo de Krausz aisló un pulso individual de $650\,\as$ usando pulsos láser de pocos ciclos, selección espectral en el borde de corte y una medición de streaking con electrones emitidos por criptón [10]. La diferencia entre ambas estrategias sigue siendo pedagógicamente importante: los trenes de pulsos permiten espectroscopia interferométrica precisa; los pulsos aislados permiten experimentos bomba-sonda donde un solo evento electrónico es iniciado y leído.
 
+\begin{center}
+\includegraphics[width=0.95\linewidth,height=1.55in,keepaspectratio]{../res/figures/research_flow.png}\\
+\small Figura 2. La investigación premiada no fue un resultado único, sino la integración progresiva de fuente, teoría, metrología y aplicaciones.
+\end{center}
+
 RABBITT funciona al superponer un tren \xuv{} con una réplica infrarroja del láser generador. Un electrón puede llegar al mismo estado final por dos caminos cuánticos: absorber un armónico impar y un fotón IR, o absorber el armónico vecino y emitir un fotón IR. La señal lateral oscila con el retardo entre \xuv{} e IR; de esa fase se infieren fases relativas de los armónicos y retardos de fotoionización. El streaking de attosegundos usa otra idea: un pulso \xuv{} libera el electrón y un campo IR sincronizado modifica su energía final según el instante exacto de emisión. En ambos casos, el observable no es una fotografía clásica, sino un mapa de fase, energía y tiempo reconstruido con interferencia cuántica [1,8,10].
 
 L'Huillier contribuyó en tres niveles: descubrió el régimen de meseta de HHG, desarrolló su teoría y convirtió los trenes de armónicos en una herramienta metrológica. Su línea de trabajo permitió abordar el problema de los retardos de fotoemisión. En 2010, el grupo de Krausz midió en neón una diferencia de $21\,\as$ entre la emisión de electrones 2s y 2p, mostrando que el efecto fotoeléctrico no es instantáneo a esta resolución [11]. Modelos teóricos posteriores daban retardos menores, lo que abrió una discrepancia significativa [12--14]. En 2017, el grupo de L'Huillier usó RABBITT con selección espectral fina para separar canales directos de ionización y canales de shake-up; al incluir correlaciones de muchos cuerpos, logró acuerdo entre teoría y experimento [15]. El punto conceptual es fuerte: en attociencia, el ``tiempo de salida'' de un electrón codifica la respuesta colectiva de toda la nube electrónica.
@@ -78,9 +90,16 @@ La primera implicación es epistemológica: procesos que durante décadas fueron
 
 La segunda implicación es técnica. La HHG ofrece fuentes de \xuv{} y rayos X blandos de mesa, coherentes y sincronizadas con el láser impulsor. Esto complementa sincrotrones y láseres de electrones libres: no alcanza siempre las mismas energías por pulso, pero ofrece estabilidad de fase y sincronización natural para experimentos bomba-sonda. La extensión hacia la ``ventana de agua'' de los rayos X blandos es crucial porque incluye bordes de absorción de carbono, nitrógeno y oxígeno, elementos centrales en química, biología y materiales [18,19]. A medida que se acortan los pulsos y sube el flujo, los laboratorios pueden observar correlaciones electrónicas, acoplamientos no adiabáticos y migración de carga antes de que los núcleos tengan tiempo de moverse.
 
+\begin{center}
+\includegraphics[width=0.86\linewidth,height=1.35in,keepaspectratio]{../res/figures/hhg_three_step.png}\\
+\small Figura 3. La HHG une una trayectoria electrónica subciclo con una emisión coherente \xuv{}; esa es la fuente física de los attopulsos.
+\end{center}
+
 La tercera implicación es para materiales y electrónica. En sólidos, los electrones no se mueven como partículas aisladas; interactúan con bandas, excitones, fonones, defectos, topología y apantallamiento. La espectroscopia de attosegundos permite estudiar corrientes petahertz, emisión de armónicos en cristales, transferencia de carga en heteroestructuras, dinámica de excitones en materiales bidimensionales y respuestas no lineales sensibles a fase de Berry [20,21]. La promesa no es simplemente hacer ``electrónica más rápida'', sino entender el límite fundamental entre campo óptico, coherencia electrónica y disipación.
 
 La cuarta implicación es molecular y química. En una reacción química, los núcleos se mueven en femtosegundos, pero la distribución electrónica decide casi inmediatamente qué enlace se debilita, qué carga migra y qué superficie de energía potencial se ocupa. La ``attoquímica'' busca seguir migración de carga, relajación Auger, acoplamientos entre estados y pérdida de coherencia. En diagnóstico molecular, Krausz y colaboradores han impulsado la idea de huellas moleculares infrarrojas de muestras biológicas; aunque esa línea no es idéntica a la generación de attopulsos, comparte tecnología láser ultrarrápida y apunta a detectar patrones moleculares complejos en fluidos humanos [22]. La aplicación médica directa todavía requiere validación, reproducibilidad clínica y escalamiento, pero ilustra cómo la infraestructura del Nobel migra hacia problemas biomédicos.
+
+La idea unificadora es que la attociencia no agrega solo resolución temporal; agrega una nueva coordenada causal. Si se conoce el retardo de emisión, la fase de la transición y el canal cuántico, se puede distinguir entre respuesta de un electrón casi independiente, correlación de muchos cuerpos y reorganización del entorno. Esa distinción es lo que conecta el Nobel con líquidos, superficies, materiales cuánticos y química ultrarrápida.
 
 \newpage
 
@@ -90,9 +109,25 @@ Después de las demostraciones de 2001, el campo avanzó en tres direcciones. La
 
 Los avances más recientes apuntan a fuentes compactas y controlables. En sólidos y grafeno, la HHG ya no se entiende solo como una copia de los gases nobles: la estructura de bandas, la fase geométrica, las trayectorias electrón-hueco y el phase matching macroscópico determinan la emisión [20,21]. Esto abre la posibilidad de chips o cristales que generen trenes de attopulsos, aunque todavía hay desafíos de daño óptico, decoherencia, eficiencia de conversión y separación de trayectorias. En paralelo, los láseres de electrones libres ofrecen pulsos \xuv{} y rayos X con energías altas; al combinarlos con ideas de shaping y diagnóstico de attosegundos, pueden llevar la attociencia a muestras diluidas, procesos no lineales y química de núcleo interno [24].
 
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}}
+\hline
+\textbf{Avance} & \textbf{Pregunta que habilita} & \textbf{Reto pendiente}\\
+\hline
+HHG en gases & Cuándo ocurre la ionización y recombinación electrónica. & Más flujo \xuv{} sin perder fase ni sincronía.\\
+RABBITT y streaking & Qué retardo y fase tiene cada canal de fotoemisión. & Separar el retardo de medición del retardo físico.\\
+Sólidos y líquidos & Cómo actúan apantallamiento, transporte y solvatación. & Modelos de muchos cuerpos verificables en muestras reales.\\
+Rayos X blandos & Cómo evoluciona la dinámica en bordes de absorción internos. & Fuentes compactas, brillantes y reproducibles.\\
+\hline
+\end{tabular}
+\end{center}
+
 Una lectura crítica del Nobel 2023 es que premia una cadena acumulativa: L'Huillier identificó y explicó el fenómeno espectral que hacía posible la escala de attosegundos; Agostini convirtió trenes de armónicos en objetos medibles mediante interferometría; Krausz aisló pulsos únicos y abrió la cronoscopía directa con streaking. Ninguno de los tres resultados basta por separado. La investigación relevante es el ensamblaje de fuente, sincronización, diagnóstico y teoría, porque un pulso de $250\,\as$ que no se mide no es todavía una herramienta científica, y una medición sin modelo de fase no revela la dinámica electrónica.
 
 En síntesis, el Nobel de Física 2023 reconoce el paso de mirar la materia por su estructura a mirarla por sus tiempos internos. La attociencia no sustituye a la espectroscopia clásica ni a la femtoquímica; las completa al situar la dinámica electrónica antes del movimiento nuclear. Su importancia futura dependerá de convertir experimentos exigentes en plataformas reproducibles: fuentes más brillantes, mayor estabilidad, mejor reconstrucción de fase, teoría de muchos cuerpos más predictiva y aplicaciones en materiales, catálisis, electrónica y biología molecular. El logro ya establecido es profundo: el laboratorio puede interrogar, con luz, la escala temporal natural del electrón.
+
+La valoración final debe ser equilibrada: el premio no significa que toda dinámica electrónica pueda observarse ya de forma directa ni que las aplicaciones tecnológicas estén resueltas. Significa que existe un método experimental general para convertir una pregunta de muchos cuerpos en una medición de fase y retardo. Esa capacidad es el punto de partida de los avances posteriores: cada nuevo material, molécula o líquido exige adaptar la fuente, el observable y el modelo teórico, pero ya no se parte de una escala inaccesible.
 
 \newpage
 \section*{Referencias}

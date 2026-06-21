@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
 \hypersetup{colorlinks=true,urlcolor=blue}
 \setbeamertemplate{navigation symbols}{}
@@ -26,48 +27,39 @@
 \end{frame}
 
 \begin{frame}{Antecedentes: de la femtoquímica a la attociencia}
+\begin{center}
+\includegraphics[width=0.88\textwidth,height=0.45\textheight,keepaspectratio]{../res/figures/time_scales.png}
+\end{center}
+\vspace{-0.05in}
 \begin{itemize}
-\item La femtoquímica resolvió movimientos nucleares y estados de transición; la escala electrónica exige $10^{-18}$ s [1,2].
-\item Un attosegundo es $10^{-18}$ s; la unidad atómica de tiempo es $24.2$ as, comparable con correlaciones electrónicas [1].
-\item La condición física para un pulso corto es una banda espectral ancha y coherente: $\Delta t\,\Delta E \sim \hbar$.
-\item La generación de armónicos altos (HHG) en gases nobles dio el salto: L'Huillier observó en 1987 una meseta de armónicos impares bajo láser IR intenso [3].
-\item Esa meseta aportó frecuencias \textsc{xuv} suficientes para sintetizar trenes de attopulsos.
+\item La femtoquímica resolvió movimientos nucleares; la attociencia entra al tiempo propio de la nube electrónica [1,2].
+\item La condición para un pulso breve es una banda espectral coherente: $\Delta t\,\Delta E \sim \hbar$.
+\item La meseta de armónicos altos observada por L'Huillier hizo posible sintetizar trenes \textsc{xuv} de attopulsos [3].
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Mecanismo físico: HHG y modelo de tres pasos}
-\begin{columns}[T,totalwidth=\textwidth]
-\begin{column}{0.56\textwidth}
+\begin{center}
+\includegraphics[width=0.9\textwidth,height=0.48\textheight,keepaspectratio]{../res/figures/hhg_three_step.png}
+\end{center}
+\vspace{-0.07in}
 \begin{enumerate}
 \item Ionización por túnel: el campo láser deforma el potencial atómico.
 \item Aceleración: el electrón libre gana energía en el campo oscilante.
 \item Recolisión y recombinación: el electrón regresa al ion y emite un fotón \textsc{xuv}.
 \end{enumerate}
-\vspace{0.05in}
-\[
-E_c \approx I_p + 3.17U_p
-\]
-\small La energía de corte depende del potencial de ionización y del potencial ponderomotriz [4--6].
-\end{column}
-\begin{column}{0.40\textwidth}
-\small
-\textbf{Claves conceptuales}
-\begin{itemize}
-\item La HHG es coherente y sincronizada con el láser impulsor.
-\item El plateau permite duración temporal extrema.
-\item La fase de los armónicos importa tanto como su intensidad.
-\item La teoría de Lewenstein-L'Huillier-Corkum conectó el modelo semiclasico con una descripción cuántica [6].
-\end{itemize}
-\end{column}
-\end{columns}
+\small La ley de corte $E_c \approx I_p + 3.17U_p$ conecta potencial de ionización, intensidad del campo y espectro disponible [4--6].
 \end{frame}
 
 \begin{frame}{Desarrollo experimental y resultados premiados}
+\begin{center}
+\includegraphics[width=0.9\textwidth,height=0.38\textheight,keepaspectratio]{../res/figures/research_flow.png}
+\end{center}
+\vspace{-0.05in}
 \begin{itemize}
 \item Agostini: experiencia en ionización por encima del umbral y metrología interferométrica; su grupo generó trenes de pulsos de 250 as y los caracterizó con RABBITT [7,8].
 \item RABBITT mide fases relativas mediante interferencia entre rutas de dos fotones: armónico + absorción IR frente a armónico vecino + emisión IR [8].
 \item Krausz: pulsos de pocos ciclos, selección de armónicos de corte y streaking; su grupo aisló un pulso único de 650 as [9,10].
-\item Streaking: un pulso \textsc{xuv} libera electrones y un campo IR sincronizado codifica el instante de emisión en la energía final [10].
 \item L'Huillier: descubrió la meseta de HHG, desarrolló la teoría y consolidó el uso de trenes de attopulsos para medir retardos de fotoionización [3,6,15].
 \end{itemize}
 \end{frame}
@@ -83,13 +75,23 @@ E_c \approx I_p + 3.17U_p
 \end{frame}
 
 \begin{frame}{Implicaciones y avances posteriores}
+\begin{columns}[T,totalwidth=\textwidth]
+\begin{column}{0.48\textwidth}
 \begin{itemize}
 \item Materiales: HHG en sólidos, corrientes petahertz, excitones, topología, fase de Berry y emisión dependiente de bandas [20,21].
 \item Química: migración de carga y acoplamientos no adiabáticos antes del movimiento nuclear; base de la ``attoquímica'' [23].
-\item Fuentes: pulsos de rayos X blandos hacia la ventana de agua y reportes recientes de 19.2 as por debajo de la unidad atómica de tiempo [18].
+\item Fuentes: pulsos de rayos X blandos hacia la ventana de agua y reportes recientes de 19.2 as [18].
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
 \item Metrología: absorción transitoria completamente attosegundo y fuentes \textit{table-top} que podrían replicarse en más laboratorios [19].
 \item Aplicaciones adyacentes: huellas moleculares infrarrojas para muestras biomédicas y detección de patrones complejos, todavía con retos de validación clínica [22].
 \end{itemize}
+\vspace{0.03in}
+\includegraphics[width=\textwidth,height=0.26\textheight,keepaspectratio]{../res/figures/time_scales.png}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Referencias}
