@@ -1,0 +1,75 @@
+name: Publish PDFs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX documents
+        uses: xu-cheng/texlive-action@v3
+        with:
+          scheme: full
+          run: |
+            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=. doc/report.tex
+            latexmk -pdfxe -interaction=nonstopmode -halt-on-error -outdir=. doc/slides.tex
+
+      - name: Prepare Pages site
+        run: |
+          mkdir -p _site
+          cp report.pdf slides.pdf _site/
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="es">
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>Atto Pulse Essay</title>
+            </head>
+            <body>
+              <h1>Atto Pulse Essay</h1>
+              <ul>
+                <li><a href="report.pdf">Ensayo: report.pdf</a></li>
+                <li><a href="slides.pdf">Presentación: slides.pdf</a></li>
+              </ul>
+            </body>
+          </html>
+          HTML
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
