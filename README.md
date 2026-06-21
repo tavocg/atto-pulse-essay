@@ -2,4 +2,4 @@
 
 Ensayo y presentación basada en la investigación de Agostini, Krausz y L'Huillier[^1].
 
-[^1]: Advanced information. NobelPrize.org. Nobel Prize Outreach 2026. Sun. 21 Jun 2026. <https://www.nobelprize.org/prizes/physics/2023/advanced-information/> 
+[^1]: The Royal Swedish Academy of Sciences. "Scientific Background: 'For Experimental Methods That Generate Attosecond Pulses of Light for the Study of Electron Dynamics in Matter.'" _NobelPrize.org_, Nobel Prize Outreach AB, 3 Oct. 2023, <https://www.nobelprize.org/uploads/2023/10/advanced-physicsprize2023-2.pdf>
