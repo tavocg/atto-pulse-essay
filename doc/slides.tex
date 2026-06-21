@@ -1,0 +1,124 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\usefonttheme{professionalfonts}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true,urlcolor=blue}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+\title[Premio Nobel de Física 2023]{Premio Nobel de Física 2023:\\pulsos de attosegundos y dinámica electrónica}
+\subtitle{Agostini, Krausz y L'Huillier\\Métodos para generar pulsos de attosegundos y estudiar electrones en la materia [1]}
+\author{Presentación de investigación}
+\date{21 de junio de 2026}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Antecedentes: de la femtoquímica a la attociencia}
+\begin{itemize}
+\item La femtoquímica resolvió movimientos nucleares y estados de transición; la escala electrónica exige $10^{-18}$ s [1,2].
+\item Un attosegundo es $10^{-18}$ s; la unidad atómica de tiempo es $24.2$ as, comparable con correlaciones electrónicas [1].
+\item La condición física para un pulso corto es una banda espectral ancha y coherente: $\Delta t\,\Delta E \sim \hbar$.
+\item La generación de armónicos altos (HHG) en gases nobles dio el salto: L'Huillier observó en 1987 una meseta de armónicos impares bajo láser IR intenso [3].
+\item Esa meseta aportó frecuencias \textsc{xuv} suficientes para sintetizar trenes de attopulsos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mecanismo físico: HHG y modelo de tres pasos}
+\begin{columns}[T,totalwidth=\textwidth]
+\begin{column}{0.56\textwidth}
+\begin{enumerate}
+\item Ionización por túnel: el campo láser deforma el potencial atómico.
+\item Aceleración: el electrón libre gana energía en el campo oscilante.
+\item Recolisión y recombinación: el electrón regresa al ion y emite un fotón \textsc{xuv}.
+\end{enumerate}
+\vspace{0.05in}
+\[
+E_c \approx I_p + 3.17U_p
+\]
+\small La energía de corte depende del potencial de ionización y del potencial ponderomotriz [4--6].
+\end{column}
+\begin{column}{0.40\textwidth}
+\small
+\textbf{Claves conceptuales}
+\begin{itemize}
+\item La HHG es coherente y sincronizada con el láser impulsor.
+\item El plateau permite duración temporal extrema.
+\item La fase de los armónicos importa tanto como su intensidad.
+\item La teoría de Lewenstein-L'Huillier-Corkum conectó el modelo semiclasico con una descripción cuántica [6].
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Desarrollo experimental y resultados premiados}
+\begin{itemize}
+\item Agostini: experiencia en ionización por encima del umbral y metrología interferométrica; su grupo generó trenes de pulsos de 250 as y los caracterizó con RABBITT [7,8].
+\item RABBITT mide fases relativas mediante interferencia entre rutas de dos fotones: armónico + absorción IR frente a armónico vecino + emisión IR [8].
+\item Krausz: pulsos de pocos ciclos, selección de armónicos de corte y streaking; su grupo aisló un pulso único de 650 as [9,10].
+\item Streaking: un pulso \textsc{xuv} libera electrones y un campo IR sincronizado codifica el instante de emisión en la energía final [10].
+\item L'Huillier: descubrió la meseta de HHG, desarrolló la teoría y consolidó el uso de trenes de attopulsos para medir retardos de fotoionización [3,6,15].
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dinámica electrónica: resultados científicos}
+\begin{itemize}
+\item El efecto fotoeléctrico dejó de tratarse como instantáneo: en neón se midió un retardo de 21 as entre electrones 2s y 2p [11].
+\item La discrepancia con teoría impulsó experimentos de mayor resolución espectral; el grupo de L'Huillier separó canales de shake-up y obtuvo acuerdo con teoría de muchos cuerpos [12--15].
+\item En agua líquida se midieron retardos de 50 a 70 as respecto al vapor, atribuidos a la solvatación y al paisaje potencial del líquido [16].
+\item En tungsteno se observaron retardos de alrededor de 100 as entre estados 4f localizados y estados de banda de conducción [17].
+\item El observable central es fase-tiempo-energía: revela correlación electrónica, apantallamiento, transporte inicial y coherencia.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Implicaciones y avances posteriores}
+\begin{itemize}
+\item Materiales: HHG en sólidos, corrientes petahertz, excitones, topología, fase de Berry y emisión dependiente de bandas [20,21].
+\item Química: migración de carga y acoplamientos no adiabáticos antes del movimiento nuclear; base de la ``attoquímica'' [23].
+\item Fuentes: pulsos de rayos X blandos hacia la ventana de agua y reportes recientes de 19.2 as por debajo de la unidad atómica de tiempo [18].
+\item Metrología: absorción transitoria completamente attosegundo y fuentes \textit{table-top} que podrían replicarse en más laboratorios [19].
+\item Aplicaciones adyacentes: huellas moleculares infrarrojas para muestras biomédicas y detección de patrones complejos, todavía con retos de validación clínica [22].
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias}
+\tiny
+\begin{enumerate}
+\item Royal Swedish Academy of Sciences. \textit{Scientific Background}. NobelPrize.org, 2023. \url{https://www.nobelprize.org/uploads/2023/10/advanced-physicsprize2023-2.pdf}
+\item Nobel Prize Outreach. \textit{Press release: The Nobel Prize in Physics 2023}. \url{https://www.nobelprize.org/prizes/physics/2023/press-release/}
+\item M. Ferray et al., \textit{J. Phys. B} 21, L31, 1988.
+\item A. L'Huillier, K. J. Schafer y K. C. Kulander, \textit{J. Phys. B} 24, 3315, 1991.
+\item P. B. Corkum, \textit{Phys. Rev. Lett.} 71, 1994, 1993.
+\item M. Lewenstein et al., \textit{Phys. Rev. A} 49, 2117, 1994.
+\item P. Agostini et al., \textit{Phys. Rev. Lett.} 42, 1127, 1979.
+\item P. M. Paul et al., \textit{Science} 292, 1689, 2001.
+\item M. Nisoli et al., \textit{Opt. Lett.} 22, 522, 1997.
+\item M. Hentschel et al., \textit{Nature} 414, 509, 2001.
+\item M. Schultze et al., \textit{Science} 328, 1658, 2010.
+\item L. R. Moore et al., \textit{Phys. Rev. A} 84, 061404(R), 2011.
+\item J. M. Dahlström et al., \textit{Phys. Rev. A} 86, 061402(R), 2012.
+\item J. Feist et al., \textit{Phys. Rev. A} 89, 033417, 2014.
+\item M. Isinger et al., \textit{Science} 358, 893, 2017.
+\item I. Jordan et al., \textit{Science} 369, 974, 2020.
+\item A. L. Cavalieri et al., \textit{Nature} 449, 1029, 2007.
+\item F. Ardana-Lamas et al., arXiv:2510.04086, 2025.
+\item M. Volkov et al., arXiv:2512.09585, 2025.
+\item M. F. Ciappina, arXiv:2510.15207, 2025.
+\item S. Martín-Domene et al., arXiv:2606.03945, 2026.
+\item M. Zigman et al., \textit{Annals of Oncology} 33, S580, 2022.
+\item F. Krausz y M. Ivanov, \textit{Rev. Mod. Phys.} 81, 163, 2009.
+\end{enumerate}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{amsmath}
+
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=1pt}
+\setlist[enumerate]{leftmargin=*,topsep=2pt,itemsep=1pt}
+\pagenumbering{gobble}
+
+\newcommand{\as}{\mathrm{as}}
+\newcommand{\fs}{\mathrm{fs}}
+\newcommand{\xuv}{XUV}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1.1in}
+{\Large Ensayo de investigación\par}
+\vspace{0.35in}
+{\huge\bfseries Premio Nobel de Física 2023:\\
+Pulsos de attosegundos y dinámica electrónica\par}
+\vspace{0.45in}
+{\Large Pierre Agostini, Ferenc Krausz y Anne L'Huillier\par}
+\vspace{0.35in}
+{\large ``por métodos experimentales que generan pulsos de luz de attosegundos para el estudio de la dinámica de electrones en la materia''\par}
+\vfill
+\begin{flushleft}
+\textbf{Asignatura:} Física\\
+\textbf{Tema:} Investigación Nobel de Física 2023\\
+\textbf{Fecha:} 21 de junio de 2026
+\end{flushleft}
+\end{titlepage}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+\section*{Antecedentes de la investigación}
+
+El Premio Nobel de Física 2023 fue concedido a Pierre Agostini, Ferenc Krausz y Anne L'Huillier por convertir una intuición central de la mecánica cuántica en una tecnología experimental: si los electrones cambian de estado en escalas de $10^{-18}$ segundos, el laboratorio necesita destellos comparables para interrogarlos. Un attosegundo equivale a una milmillonésima de una milmillonésima de segundo; la unidad atómica de tiempo es $24.2\,\as$, y muchas correlaciones electrónicas, retardos de fotoemisión y redistribuciones de carga ocurren entre decenas y cientos de attosegundos [1]. Antes de esta área, la femtoquímica de Ahmed Zewail había mostrado cómo observar movimientos nucleares y estados de transición con pulsos de femtosegundos, pero esa escala todavía era demasiado lenta para seguir directamente la nube electrónica [1,2].
+
+El antecedente técnico fue el desarrollo de láseres ultracortos: bloqueo de modos, amplificación de pulsos chirpeados, compresión por fibras huecas y espejos chirpeados. Sin embargo, el salto conceptual vino de la generación de armónicos altos, o HHG. En 1987, L'Huillier y colaboradores observaron que un gas noble iluminado con láser infrarrojo intenso no emitía solo pocos armónicos, sino una meseta de armónicos impares que se extendía hasta energías del ultravioleta extremo [3]. Esa meseta revelaba una banda espectral ancha, condición necesaria para sintetizar pulsos breves por el principio de Fourier: cuanto más ancho es el espectro coherente, menor puede ser la duración temporal.
+
+La física de la HHG se entendió mediante el modelo de tres pasos. Primero, el campo láser deforma el potencial atómico y permite la ionización por túnel. Segundo, el electrón liberado es acelerado por el campo oscilante. Tercero, cuando el campo cambia de signo, parte de la amplitud electrónica regresa al ion y recombina, emitiendo un fotón \xuv{} cuya energía combina la energía de ionización $I_p$ y la energía cinética adquirida en el campo. La ley de corte se aproxima por
+\[
+E_c \approx I_p + 3.17U_p,
+\]
+donde $U_p$ es el potencial ponderomotriz, proporcional a la intensidad y al cuadrado de la longitud de onda del láser [4,5]. La teoría cuántica de Lewenstein, Balcou, Ivanov, L'Huillier y Corkum consolidó esta lectura semiclasica y explicó por qué la meseta de armónicos podía actuar como peine de frecuencias coherentes [6].
+
+Agostini aportó un antecedente decisivo desde la física de campos intensos: la ionización por encima del umbral, en la que un electrón absorbe más fotones de los estrictamente necesarios y aparece una escalera de energías fotoelectrónicas [7]. Esa experiencia técnica fue clave para diseñar la metrología RABBITT, que reconstruye la fase de trenes de attopulsos mediante interferencia entre transiciones de dos fotones [8]. Krausz, por su parte, desarrolló la tecnología de pulsos de pocos ciclos y estabilización necesaria para aislar un único destello de attosegundos en vez de producir solo trenes periódicos [9,10].
+
+\newpage
+
+\section*{Desarrollo y resultados de la investigación}
+
+El resultado central del campo fue producir y medir pulsos de luz suficientemente cortos para tomar ``instantáneas'' de electrones. En 2001 se publicaron dos demostraciones complementarias. El grupo de Agostini generó un tren de pulsos de $250\,\as$ a partir de HHG y lo caracterizó con RABBITT [8]. En el mismo año, el grupo de Krausz aisló un pulso individual de $650\,\as$ usando pulsos láser de pocos ciclos, selección espectral en el borde de corte y una medición de streaking con electrones emitidos por criptón [10]. La diferencia entre ambas estrategias sigue siendo pedagógicamente importante: los trenes de pulsos permiten espectroscopia interferométrica precisa; los pulsos aislados permiten experimentos bomba-sonda donde un solo evento electrónico es iniciado y leído.
+
+RABBITT funciona al superponer un tren \xuv{} con una réplica infrarroja del láser generador. Un electrón puede llegar al mismo estado final por dos caminos cuánticos: absorber un armónico impar y un fotón IR, o absorber el armónico vecino y emitir un fotón IR. La señal lateral oscila con el retardo entre \xuv{} e IR; de esa fase se infieren fases relativas de los armónicos y retardos de fotoionización. El streaking de attosegundos usa otra idea: un pulso \xuv{} libera el electrón y un campo IR sincronizado modifica su energía final según el instante exacto de emisión. En ambos casos, el observable no es una fotografía clásica, sino un mapa de fase, energía y tiempo reconstruido con interferencia cuántica [1,8,10].
+
+L'Huillier contribuyó en tres niveles: descubrió el régimen de meseta de HHG, desarrolló su teoría y convirtió los trenes de armónicos en una herramienta metrológica. Su línea de trabajo permitió abordar el problema de los retardos de fotoemisión. En 2010, el grupo de Krausz midió en neón una diferencia de $21\,\as$ entre la emisión de electrones 2s y 2p, mostrando que el efecto fotoeléctrico no es instantáneo a esta resolución [11]. Modelos teóricos posteriores daban retardos menores, lo que abrió una discrepancia significativa [12--14]. En 2017, el grupo de L'Huillier usó RABBITT con selección espectral fina para separar canales directos de ionización y canales de shake-up; al incluir correlaciones de muchos cuerpos, logró acuerdo entre teoría y experimento [15]. El punto conceptual es fuerte: en attociencia, el ``tiempo de salida'' de un electrón codifica la respuesta colectiva de toda la nube electrónica.
+
+La investigación también produjo una gramática experimental para sistemas más complejos. En agua líquida, Wörner y colaboradores midieron retardos de 50 a $70\,\as$ respecto al vapor, asociados al entorno de solvatación [16]. En tungsteno, Cavalieri y colaboradores midieron alrededor de $100\,\as$ de diferencia entre fotoelectrones de estados 4f localizados y estados de banda de conducción, revelando cómo transporte, apantallamiento y dispersión electrónica entran en escalas ultrarrápidas [17]. Estos resultados muestran que el Nobel no premió un solo aparato, sino una plataforma: fuentes \xuv{}/rayos X blandos, sincronización subciclo, metrología de fase y modelos de muchos cuerpos.
+
+\newpage
+
+\section*{Implicaciones científicas}
+
+La primera implicación es epistemológica: procesos que durante décadas fueron tratados como instantáneos ahora son medibles. La fotoemisión, la ionización por túnel, la recombinación, el transporte inicial en sólidos y la transferencia de carga en moléculas pueden formularse como problemas temporales. Esto cambia la pregunta experimental de ``que energía tiene el electrón'' a ``cuándo sale, por qué canal y con qué fase relativa''. En mecánica cuántica, la fase no es un detalle: gobierna interferencias, coherencias y correlaciones. Por eso la attociencia conecta espectroscopia, control coherente y dinámica de muchos cuerpos.
+
+La segunda implicación es técnica. La HHG ofrece fuentes de \xuv{} y rayos X blandos de mesa, coherentes y sincronizadas con el láser impulsor. Esto complementa sincrotrones y láseres de electrones libres: no alcanza siempre las mismas energías por pulso, pero ofrece estabilidad de fase y sincronización natural para experimentos bomba-sonda. La extensión hacia la ``ventana de agua'' de los rayos X blandos es crucial porque incluye bordes de absorción de carbono, nitrógeno y oxígeno, elementos centrales en química, biología y materiales [18,19]. A medida que se acortan los pulsos y sube el flujo, los laboratorios pueden observar correlaciones electrónicas, acoplamientos no adiabáticos y migración de carga antes de que los núcleos tengan tiempo de moverse.
+
+La tercera implicación es para materiales y electrónica. En sólidos, los electrones no se mueven como partículas aisladas; interactúan con bandas, excitones, fonones, defectos, topología y apantallamiento. La espectroscopia de attosegundos permite estudiar corrientes petahertz, emisión de armónicos en cristales, transferencia de carga en heteroestructuras, dinámica de excitones en materiales bidimensionales y respuestas no lineales sensibles a fase de Berry [20,21]. La promesa no es simplemente hacer ``electrónica más rápida'', sino entender el límite fundamental entre campo óptico, coherencia electrónica y disipación.
+
+La cuarta implicación es molecular y química. En una reacción química, los núcleos se mueven en femtosegundos, pero la distribución electrónica decide casi inmediatamente qué enlace se debilita, qué carga migra y qué superficie de energía potencial se ocupa. La ``attoquímica'' busca seguir migración de carga, relajación Auger, acoplamientos entre estados y pérdida de coherencia. En diagnóstico molecular, Krausz y colaboradores han impulsado la idea de huellas moleculares infrarrojas de muestras biológicas; aunque esa línea no es idéntica a la generación de attopulsos, comparte tecnología láser ultrarrápida y apunta a detectar patrones moleculares complejos en fluidos humanos [22]. La aplicación médica directa todavía requiere validación, reproducibilidad clínica y escalamiento, pero ilustra cómo la infraestructura del Nobel migra hacia problemas biomédicos.
+
+\newpage
+
+\section*{Avances posteriores y valoración}
+
+Después de las demostraciones de 2001, el campo avanzó en tres direcciones. La primera fue acortar y energizar los pulsos. Experimentos de rayos X blandos han reportado pulsos de decenas de attosegundos, y trabajos recientes proponen o demuestran fuentes cercanas o incluso por debajo de la unidad atómica de tiempo [18]. La segunda dirección fue pasar de átomos aislados a moléculas, líquidos, superficies y sólidos. Ahí la complejidad aumenta: aparecen múltiples canales de ionización, propagación en el material, colisiones, corrientes de banda y acoplamiento con el entorno. La tercera fue mejorar la metrología: RABBITT, streaking, absorción transitoria de attosegundos y esquemas ``all-attosecond'' buscan simultáneamente resolución temporal, resolución espectral y sensibilidad de fase [19,23].
+
+Los avances más recientes apuntan a fuentes compactas y controlables. En sólidos y grafeno, la HHG ya no se entiende solo como una copia de los gases nobles: la estructura de bandas, la fase geométrica, las trayectorias electrón-hueco y el phase matching macroscópico determinan la emisión [20,21]. Esto abre la posibilidad de chips o cristales que generen trenes de attopulsos, aunque todavía hay desafíos de daño óptico, decoherencia, eficiencia de conversión y separación de trayectorias. En paralelo, los láseres de electrones libres ofrecen pulsos \xuv{} y rayos X con energías altas; al combinarlos con ideas de shaping y diagnóstico de attosegundos, pueden llevar la attociencia a muestras diluidas, procesos no lineales y química de núcleo interno [24].
+
+Una lectura crítica del Nobel 2023 es que premia una cadena acumulativa: L'Huillier identificó y explicó el fenómeno espectral que hacía posible la escala de attosegundos; Agostini convirtió trenes de armónicos en objetos medibles mediante interferometría; Krausz aisló pulsos únicos y abrió la cronoscopía directa con streaking. Ninguno de los tres resultados basta por separado. La investigación relevante es el ensamblaje de fuente, sincronización, diagnóstico y teoría, porque un pulso de $250\,\as$ que no se mide no es todavía una herramienta científica, y una medición sin modelo de fase no revela la dinámica electrónica.
+
+En síntesis, el Nobel de Física 2023 reconoce el paso de mirar la materia por su estructura a mirarla por sus tiempos internos. La attociencia no sustituye a la espectroscopia clásica ni a la femtoquímica; las completa al situar la dinámica electrónica antes del movimiento nuclear. Su importancia futura dependerá de convertir experimentos exigentes en plataformas reproducibles: fuentes más brillantes, mayor estabilidad, mejor reconstrucción de fase, teoría de muchos cuerpos más predictiva y aplicaciones en materiales, catálisis, electrónica y biología molecular. El logro ya establecido es profundo: el laboratorio puede interrogar, con luz, la escala temporal natural del electrón.
+
+\newpage
+\section*{Referencias}
+\small
+\begin{enumerate}
+\item The Royal Swedish Academy of Sciences. \textit{Scientific Background: For experimental methods that generate attosecond pulses of light for the study of electron dynamics in matter}. NobelPrize.org, 2023. \url{https://www.nobelprize.org/uploads/2023/10/advanced-physicsprize2023-2.pdf}
+\item Nobel Prize Outreach. \textit{The Nobel Prize in Physics 2023: Press release}. 3 Oct. 2023. \url{https://www.nobelprize.org/prizes/physics/2023/press-release/}
+\item M. Ferray, A. L'Huillier, X. F. Li, L. A. Lompre, G. Mainfray y C. Manus. ``Multiple-harmonic conversion of 1064 nm radiation in rare gases''. \textit{J. Phys. B} 21, L31, 1988.
+\item A. L'Huillier, K. J. Schafer y K. C. Kulander. ``Theoretical aspects of intense field harmonic generation''. \textit{J. Phys. B} 24, 3315, 1991.
+\item P. B. Corkum. ``Plasma perspective on strong field multiphoton ionization''. \textit{Phys. Rev. Lett.} 71, 1994, 1993.
+\item M. Lewenstein, Ph. Balcou, M. Yu. Ivanov, A. L'Huillier y P. B. Corkum. ``Theory of high-harmonic generation by low-frequency laser fields''. \textit{Phys. Rev. A} 49, 2117, 1994.
+\item P. Agostini, F. Fabre, G. Mainfray, G. Petite y N. K. Rahman. ``Free-free transitions following six-photon ionization of xenon atoms''. \textit{Phys. Rev. Lett.} 42, 1127, 1979.
+\item P. M. Paul et al. ``Observation of a train of attosecond pulses from high harmonic generation''. \textit{Science} 292, 1689, 2001.
+\item M. Nisoli et al. ``Generation of high energy 10 fs pulses by a new pulse compression technique''. \textit{Opt. Lett.} 22, 522, 1997.
+\item M. Hentschel et al. ``Attosecond metrology''. \textit{Nature} 414, 509, 2001.
+\item M. Schultze et al. ``Delay in photoemission''. \textit{Science} 328, 1658, 2010.
+\item L. R. Moore et al. ``Time delay between photoemission from the 2p and 2s subshells of neon''. \textit{Phys. Rev. A} 84, 061404(R), 2011.
+\item J. M. Dahlström, T. Carette y E. Lindroth. ``Diagrammatic approach to attosecond delays in photoionization''. \textit{Phys. Rev. A} 86, 061402(R), 2012.
+\item J. Feist et al. ``Time delays for attosecond streaking in photoionization of neon''. \textit{Phys. Rev. A} 89, 033417, 2014.
+\item M. Isinger et al. ``Photoionization in the time and frequency domain''. \textit{Science} 358, 893, 2017.
+\item I. Jordan et al. ``Attosecond spectroscopy of liquid water''. \textit{Science} 369, 974, 2020.
+\item A. L. Cavalieri et al. ``Attosecond spectroscopy in condensed matter''. \textit{Nature} 449, 1029, 2007.
+\item F. Ardana-Lamas, S. L. Cousin, J. Lignieres y J. Biegert. ``Brilliant source of 19.2 attosecond soft X-ray pulses below the atomic unit of time''. arXiv:2510.04086, 2025.
+\item M. Volkov et al. ``Table-top all-attosecond transient absorption spectroscopy''. arXiv:2512.09585, 2025.
+\item M. F. Ciappina. ``Solid-state high-order harmonic generation: emerging frontiers in ultrafast and quantum light science''. arXiv:2510.15207, 2025.
+\item S. Martín-Domene, L. Plaja y C. Hernández-García. ``Attosecond pulse trains from graphene via macroscopic phase-matching in high harmonic generation''. arXiv:2606.03945, 2026.
+\item M. Zigman et al. ``Infrared molecular fingerprinting for cancer detection''. \textit{Annals of Oncology} 33, S580, 2022.
+\item F. Krausz y M. Ivanov. ``Attosecond physics''. \textit{Rev. Mod. Phys.} 81, 163, 2009.
+\item P. K. Maroju et al. ``Attosecond pulse shaping using a seeded free-electron laser''. \textit{Nature} 578, 386, 2020.
+\end{enumerate}
+
+\end{document}
